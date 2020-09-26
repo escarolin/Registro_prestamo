@@ -1,0 +1,41 @@
+﻿<Window x:Class="Registro_prestamo.UI.Registros.rPersonas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Registro_prestamo.UI.Registros"
+        mc:Ignorable="d"
+        Title="Personas" Height="500" Width="500">
+    <Grid>
+        <StackPanel Margin="-100,-110,-1,-1 " VerticalAlignment="Center" HorizontalAlignment="Center">
+            <!--PersonaId-->
+            <Label Content= "PersonaId" FontWeight="Bold"  FontSize="14px" Margin="130,-125,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal"/>
+            <TextBox x:Name="PersonasIdTextBox" Text="{Binding PersonaId}" Width="50" Height="25" Margin="10,-225,0,0"/>
+            <!--Nombre-->
+            <Label Content= "Nombres:" FontWeight="Bold"  FontSize="14px" Margin="110,-90,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal"/>
+            <TextBox x:Name="NombresTextBox" Text="{Binding Nombres}" Width="190" Height="25" Margin="150,-140,0,0"/>
+            <!--Balance-->
+            <Label Content= "Balance" FontWeight="Bold"  FontSize="14px" Margin="110,-60,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal"/>
+            <TextBox x:Name="BalanceTextBox" Text="{Binding Balance}" Width="190" Height="25" Margin="150,-90,0,0"/>
+
+            <Label Content= "Fecha" FontWeight="Bold"  FontSize="13px"  Margin="110,-15,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal"/>
+             <DatePicker x:Name="FechaDatePicker" Text="(Binding Fecha)" Width="190" Height="27" Margin="150,-20,0,0"/>
+           
+           
+            <!--boton buscar-->
+            <Button x:Name ="BuscarButton" Margin="240,-265,0,0" Width="100" Height="30" Content="Buscar" Click="BuscarButton_Click"/>
+             <Image Source= "/Imagenes/Buscar.png" Width="25" Height= "25" Margin="170,-260,0,0"/>
+            <!--boton nuevo-->
+            <Button x:Name ="NuevoButton" Margin="-120,40,0,0" Width="100" Height="40" Content=" Nuevo" Click="NuevoButton_Click"/>
+            <Image Source= "/Imagenes/Nuevo.png" Width="40" Height= "40" Margin="-187,-40,0,0"/>
+            <!-- Boton Guardar-->
+            <Button x:Name ="GuardarButton" Margin="140,-40,0,0" Width = "100" Height = "40" Content="Guardar" Click="GuardarButton_Click"/>
+           <Image Source="/Imagenes/Guardar.png" Width="35" Height= "35" Margin="75,-40,0,0"/>
+            <!--Boton Eliminar-->
+            <Button x:Name ="EliminarButton" Margin="390,-40,0,0" Width = "100" Height = "40" Content="Eliminar" Click="EliminarButton_Click"/>
+            <Image Source= "/Imagenes/Borrar.png" Width="30" Height= "30" Margin="330,-40,0,0"/>
+        </StackPanel>
+
+
+    </Grid>
+</Window>
